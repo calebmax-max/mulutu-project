@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="styles.css">
         <script src="dist/js/bootstrap.js"></script>
 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <body>
@@ -20,10 +20,11 @@
                     </button>
                     <div id="navbarcontents" class="navbar-collapse collapse">
                         <div class="navbar-nav">
-                             <a href="index.htm" class="nav-link active" style="margin-left:40px;" id="a1">Home</a>   
+                             <a href="index.html" class="nav-link active" style="margin-left:40px;" id="a1">Home</a>   
                              <a href="about.html" class="nav-link" id="a1" style="margin-left: 30px;">About</a>
                              <a href="Gallery.html" class="nav-link" id="a1" style="margin-left: 30px;">Gallery</a>
-                             <a href="Contact.html" id="a1" class="nav-link" style="margin-left: 30px;"> Contact Us</a>
+                             <a href="sermons.html"  class="nav-link" id="a1" style="margin-left: 30px;">Sermons</a>
+                             <a href="contact.html" id="a1" class="nav-link" style="margin-left: 30px;"> Contact Us</a>
                         </div>
                     </div>
 
@@ -41,7 +42,7 @@
             <div class="hero-video__overlay">
                 <h1 id="wel">Welcome to Church</h1>
                 <p>Our anchor is Christ</p>
-                <div class="hero-video__btn">God Above All</div>
+                <div class="hero-video__btn"><a href="sermons.html" style="text-decoration: none;">Sermons</a></div>
             </div>
         </section>
 
@@ -59,22 +60,47 @@
                         AIC Mulutu Township is a family of believers committed to worship, prayer, and the teaching of God's Word. We welcome everyone with love and fellowship as we grow in faith together and serve our community with compassion.
                     </p>
                     <div class="row g-3 mt-1">
-                        <div class="col-6 col-md-3">
-                            <img src="images/img1.jpg" alt="Church members during worship service" class="img-fluid rounded welcome-photo">
+                        <div class="col-6 col-md-12">
+                            <img src="IMG-20250820-WA0028.jpg" alt="Church members during worship service" class="img-fluid rounded welcome-photo">
                         </div>
-                        <div class="col-6 col-md-3">
-                            <img src="images/img2.jpg" alt="Church members in fellowship" class="img-fluid rounded welcome-photo">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="images/img3.jpg" alt="Church members during a prayer session" class="img-fluid rounded welcome-photo">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="images/img4.jpg" alt="Church members gathered in ministry" class="img-fluid rounded welcome-photo">
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
 
+
+            <section class="container my-5 reveal-on-scroll reveal-delay-2 section-divider" id="church-stats">
+                <div class="card p-4 border-0 shadow-sm stats-card">
+                    <h3 class="text-center mb-4">Our Church by the Numbers</h3>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3">
+                            <div class="stat-box">
+                                <span class="count-up" data-target="11" data-suffix="+">0+</span>
+                                <p class="stat-label">Years of Ministry</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-box">
+                                <span class="count-up" data-target="3">0</span>
+                                <p class="stat-label">Weekly Services</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-box">
+                                <span class="count-up" data-target="150" data-suffix="+">0+</span>
+                                <p class="stat-label">Active Members</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-box">
+                                <span class="count-up" data-target="40" data-suffix="+">0+</span>
+                                <p class="stat-label">Youth Involved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="container my-5 reveal-on-scroll reveal-delay-1" id="pastor-section">
                 <div class="card p-4 border-0 shadow-sm pastor-card">
                     <h3 class="text-center mb-3 pastor-title">PASTOR IN CHARGE</h3>
@@ -96,11 +122,7 @@
                 </div>
             </section>
 
-        </div> <br> <br>
-
-        
-
-
+        </div> <br> 
        
         <div class="reveal-on-scroll reveal-delay-3">
 
@@ -179,7 +201,7 @@
                     SUNDAYS
                 </button>  <hr> 
                 <i id="italize">Sunday School(Children)</i>
-                <b id="b3">0830Hrs - 1000Hrs</b> <br>
+                <b id="b3">0800Hrs - 0900Hrs</b> <br>
                 <i id="italize">Main Service</i>
                 <b id="b3">1030Hrs - 1300Hrs</b> <br>
                 <i id="italize">Choir practice</i>
@@ -219,7 +241,7 @@
                 <a href="index.html" id="a">Home</a> <br> 
                 <a href="about.html" id="a">About Us</a> <br>
                 <a href="Gallery.html" id="a">Gallery</a><br>
-                <a href="Contact.html" id="a">Contact</a>
+                <a href="contact.html" id="a">Contact</a>
             
 
             </div>
@@ -233,43 +255,18 @@
 
 
     
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var revealItems = document.querySelectorAll(".reveal-on-scroll");
-
-                if (!("IntersectionObserver" in window)) {
-                    revealItems.forEach(function (item) {
-                        item.classList.add("is-visible");
-                    });
-                    return;
-                }
-
-                var observer = new IntersectionObserver(
-                    function (entries, obs) {
-                        entries.forEach(function (entry) {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add("is-visible");
-                                obs.unobserve(entry.target);
-                            }
-                        });
-                    },
-                    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-                );
-
-                revealItems.forEach(function (item) {
-                    observer.observe(item);
-                });
-            });
-        </script>
-        
-
-
-
-
-
-    </body>
+            <script src="animations.js"></script>
+</body>
 
 
 </html>
+
+
+
+
+
+
+
+
 
 

@@ -5,8 +5,8 @@
         <link rel="stylesheet" href="dist/css/bootstrap.css">
         <link rel="stylesheet" href="styles.css">
         <script src="dist/js/bootstrap.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <body>
         <section class="row">
@@ -21,7 +21,8 @@
                             <a href="index.html" class="nav-link active" style="margin-left:40px;" id="a1">Home</a>
                             <a href="about.html" class="nav-link" id="a1" style="margin-left: 30px;">About</a>
                             <a href="Gallery.html" class="nav-link" id="a1" style="margin-left: 30px;">Gallery</a>
-                            <a href="Contact.html" id="a1" class="nav-link" style="margin-left: 30px;"> Contact Us</a>
+                            <a href="sermons.html"  class="nav-link" id="a1" style="margin-left: 30px;">Sermons</a>
+                            <a href="contact.html" id="a1" class="nav-link" style="margin-left: 30px;"> Contact Us</a>
                         </div>
                     </div>
                 </nav>
@@ -97,7 +98,7 @@
                 <a href="index.html" id="a">Home</a> <br> 
                 <a href="about.html" id="a">About Us</a> <br>
                 <a href="Gallery.html" id="a">Gallery</a><br>
-                <a href="Contact.html" id="a">Contact</a>
+                <a href="contact.html" id="a">Contact</a>
             
 
             </div>
@@ -106,35 +107,14 @@
                     <h4><b>Developed by Caleb Tonny  &copy;2026 All rights preserved.</b></h4>
                    </footer>
 
-<script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var revealItems = document.querySelectorAll(".reveal-on-scroll");
-
-                if (!("IntersectionObserver" in window)) {
-                    revealItems.forEach(function (item) {
-                        item.classList.add("is-visible");
-                    });
-                    return;
-                }
-
-                var observer = new IntersectionObserver(
-                    function (entries, obs) {
-                        entries.forEach(function (entry) {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add("is-visible");
-                                obs.unobserve(entry.target);
-                            }
-                        });
-                    },
-                    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-                );
-
-                revealItems.forEach(function (item) {
-                    observer.observe(item);
-                });
-            });
-        </script>
-    </body>
+    <script src="animations.js"></script>
+</body>
 </html>
+
+
+
+
+
+
 
 
