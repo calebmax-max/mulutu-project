@@ -818,37 +818,6 @@ footer.text-white.text-center.bg-dark.reveal-on-scroll.reveal-delay-3 h4 {
     margin: 0;
 }
 
-/* Fixed footer with no animation */
-body {
-    padding-bottom: 72px;
-}
-
-footer {
-    position: fixed !important;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 2200;
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-}
-
-footer.reveal-on-scroll {
-    opacity: 1 !important;
-    filter: none !important;
-    transform: none !important;
-    transition: none !important;
-}
-
-footer::before,
-footer h4 {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-}
-
 /* Global site motion */
 body {
     opacity: 0;
@@ -2496,4 +2465,65 @@ object {
         max-width: 240px;
         justify-content: center;
     }
+}
+
+/* Motion disabled globally */
+html {
+    scroll-behavior: auto !important;
+}
+
+body:not(.gallery-page) *,
+body:not(.gallery-page) *::before,
+body:not(.gallery-page) *::after {
+    animation: none !important;
+    transition: none !important;
+}
+
+body:not(.gallery-page),
+body:not(.gallery-page).site-ready,
+body:not(.gallery-page) .reveal-on-scroll,
+body:not(.gallery-page) .reveal-on-scroll.is-visible,
+body:not(.gallery-page) .hero-video__overlay h1,
+body:not(.gallery-page) .hero-video__overlay p,
+body:not(.gallery-page) .hero-video__btn,
+body:not(.gallery-page) .navbar .nav-link,
+body:not(.gallery-page) .text-glide,
+body:not(.gallery-page) .text-glide.is-glide-visible,
+body:not(.gallery-page) .micro-pop,
+body:not(.gallery-page) .micro-pop.is-popped {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* Gallery page motion */
+body.gallery-page .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(2px);
+    transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease !important;
+}
+
+body.gallery-page .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: none;
+}
+
+body.gallery-page .pastor-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+body.gallery-page .pastor-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+body.gallery-page .gallery-photo-full {
+    transition: transform 0.45s ease, filter 0.45s ease !important;
+}
+
+body.gallery-page .gallery-photo-full:hover {
+    transform: scale(1.03);
+    filter: saturate(1.08);
 }
