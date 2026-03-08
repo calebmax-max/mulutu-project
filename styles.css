@@ -2293,6 +2293,18 @@ footer h4 {
 }
 
 @media (max-width: 991.98px) {
+    .navbar {
+        position: relative;
+        padding-right: 5rem;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+        z-index: 1051;
+    }
+
     .navbar-brand img {
         width: 70px !important;
     }
@@ -2304,6 +2316,11 @@ footer h4 {
 
     #navbarcontents .navbar-nav {
         padding: 0.5rem 0;
+    }
+
+    #navbarcontents {
+        width: 100%;
+        margin-top: 0.35rem;
     }
 
     .navbar .nav-link {
@@ -2384,6 +2401,15 @@ footer h4 {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        padding-right: 4.4rem;
+    }
+
+    .navbar-toggler {
+        top: 0.55rem;
+        right: 0.7rem;
+    }
+
     .navbar-brand img {
         width: 56px !important;
     }
